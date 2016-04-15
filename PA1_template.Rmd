@@ -48,10 +48,10 @@ b <- a + geom_histogram(aes(steps), stat="bin", fill = "blue") +
 #plot a histogram of the total number of steps per day
 print(b)
 
-#mean steps per day
+#mean steps per day = 10766
 steps_mean_daily <- sum(steps_sum$steps)/length(unique(steps_sum$date))
 
-#median steps per day
+#median steps per day = 10765
 steps_median <- as.numeric(median(steps_sum$steps))
 
 #sum the total number of steps per interval
@@ -93,13 +93,13 @@ d <- c + geom_histogram(aes(steps), stat="bin", fill = "red") +
 
 e <- b + ylim(0, 12.5)
 
-#mean step count for the new step count
+#mean step count for the new step count = 10766
 new_steps_mean_daily <- sum(new_steps_sum$steps)/length(unique(new_steps_sum$date))
 
-#median step for the new data set
+#median step for the new data set = 10766
 new_steps_median <- as.numeric(median(new_steps_sum$steps))
 
-#difference between mean daily step count for both data sets 
+#difference between mean daily step count for both data sets
 new_steps_mean_daily - steps_mean_daily 
 
 #difference between the median step count value for each data set
